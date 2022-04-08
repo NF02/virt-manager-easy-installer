@@ -7,12 +7,12 @@ automatic assignment of user privileges.
 ## Setup
 The first step is to clone the repo
 ```sh
-	git clone https://github.com/NF02/virt-manager-dotfiles && cd virt-manager-dotfiles
+git clone https://github.com/NF02/virt-manager-dotfiles && cd virt-manager-dotfiles
 ```
 The second step is to grant the application the execution permissions,
 to do that it is necessary to execute the command
 ```sh
-	chmod +x install-virtmenager.sh
+chmod +x install-virtmenager.sh
 ```
 
 ### EFI Firmware
