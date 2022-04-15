@@ -15,6 +15,9 @@ to do that it is necessary to execute the command
 chmod +x install-virtmenager.sh
 ```
 
+*Obviously the execution permissions must be assigned manually, otherwise it does not
+allow you to execute the parts it requires.*
+
 ### EFI Firmware
 The UEFI firmware is a separate package compared to the virtualization 
 environment, and for this reason I have included it in the script so that I can
