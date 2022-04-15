@@ -1,5 +1,5 @@
 #!/bin/sh
-install_\virt() {
+install_virt() {
 	sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils \
 		openbsd-netcat ebtables iptables ebtables iptables edk2-ovmf
 
@@ -12,7 +12,7 @@ install_\virt() {
 	notify-send "Done!"
 }
 
-if [[ $1 == --help ]] || [[ $1 == -h ]] || [[ $1 == -HELP ]] || [[ $1 == "" ]]; then
+if [[ $1 == --help ]] || [[ $1 == -h ]] || [[ $1 == -HELP ]]; then
 	cat << 'EOF'
 This script will install virt-manager and qemu with all necessary packages, 
 obviously reading the documentation is recommended.
@@ -34,10 +34,14 @@ if ! command_exists pacman; then
     echo "Sorry this script is for Arch Linux only"
     exit 1
 fi
-
+if [[ $1 == "-y" ]];then
+	install_virt
+	exit 0
+fi
 echo "Do you want to install the virt-manager environment?"
 read con
 
 if [[ $con == "yes" ]];then
-	install_virt
+   	install_virt
+   	exit 0
 fi
