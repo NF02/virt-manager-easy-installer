@@ -1,7 +1,8 @@
 #!/bin/sh
 install_virt() {
 	sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils \
-		openbsd-netcat ebtables iptables ebtables iptables edk2-ovmf
+	     openbsd-netcat ebtables iptables ebtables iptables edk2-ovmf \
+	     qemu-arch-extra archboot-qemu-aarch64
 
 	sudo systemctl enable --now libvirtd.service
 
