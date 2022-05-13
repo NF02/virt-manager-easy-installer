@@ -23,7 +23,15 @@ The UEFI firmware is a separate package compared to the virtualization
 environment, and for this reason I have included it in the script so that I can
 fully exploit it. Of course the `HOST` machine can also be legacy because it
 doesn't affect the `guest` system.
-
+## Autoinstall ##
+### curl ###
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager.sh)"
+```
+### wget ###
+```bash
+ sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager.sh -O -)"
+```
 ## Warning!! ##
 This script is meant to be run with an admin user, so that can use admin
 privileges via the `sudo` command, in case this utility is not installed
