@@ -48,10 +48,24 @@ if [[ $1 == "-y" ]];then
 	exit 0
 fi
 
-echo "Do you want to install the virt-manager environment?"
+cat << 'EOF'
+╻ ╻╻┏━┓╺┳╸   ┏┳┓┏━┓┏┓╻┏━┓┏━╸┏━╸┏━┓   ╻┏┓╻┏━┓╺┳╸┏━┓╻  ╻  ┏━╸┏━┓
+┃┏┛┃┣┳┛ ┃ ╺━╸┃┃┃┣━┫┃┗┫┣━┫┃╺┓┣╸ ┣┳┛   ┃┃┗┫┗━┓ ┃ ┣━┫┃  ┃  ┣╸ ┣┳┛
+┗┛ ╹╹┗╸ ╹    ╹ ╹╹ ╹╹ ╹╹ ╹┗━┛┗━╸╹┗╸   ╹╹ ╹┗━┛ ╹ ╹ ╹┗━╸┗━╸┗━╸╹┗╸
+--------------------------------------------------------------
+ * easy install
+ * efi firmware
+ * arm support
+ * distro supported - Arch Linux, Fedora and Debian
+ * qemu extra
+-------------------------------------------------------------- 
+Do you want to install the virt-manager environment?
+
+EOF
 read con
 
-if [[ $con == "yes" ]];then
+if [[ $con == "yes" ]] || [[ $con == "y" ]];then
    	install_virt
    	exit 0
+   else echo "exit!!!"
 fi
