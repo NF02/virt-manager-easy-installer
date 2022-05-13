@@ -10,9 +10,9 @@ install_virt() {
 		sudo pacman -Sy qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils \
 	     		openbsd-netcat ebtables iptables ebtables iptables edk2-ovmf \
 	     		qemu-arch-extra archboot-qemu-aarch64
-	else if command_exists apt; then
+	else if command_exists apt; then # installer for Debian 
 		 apt install libvirt-deamon virt-manager qemu
-	     else if command_exists dnf; then
+	     else if command_exists dnf; then # installer for Fedora
 		      sudo dnf install @virtualization
 		      else echo "I'm sorry"
 		  fi
@@ -59,8 +59,7 @@ cat << 'EOF'
  * distro supported - Arch Linux, Fedora and Debian
  * qemu extra
 -------------------------------------------------------------- 
-Do you want to install the virt-manager environment?
-
+Do you want to install the virt-manager environment (Yes or No)?
 EOF
 read con
 
