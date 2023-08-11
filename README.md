@@ -33,6 +33,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-i
  sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager.sh -O -)"
 ```
 ## Warning!! ##
-This script is meant to be run with an admin user, so that can use admin
+- This script is meant to be run with an admin user, so that can use admin
 privileges via the `sudo` command, in case this utility is not installed
 the script will not work.
+- Another requirement is Systemd Init.
