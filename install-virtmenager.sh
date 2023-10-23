@@ -7,9 +7,8 @@ if ! command_exists sudo; then
 fi
 install_virt() {
     	if command_exists pacman; then
-		sudo pacman -Sy qemu-desktop virt-manager virt-viewer dnsmasq vde2 bridge-utils \
-	     		openbsd-netcat ebtables iptables ebtables iptables edk2-ovmf \
-	     		qemu-arch-extra 
+		sudo pacman -Sy qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils \
+	     		openbsd-netcat ebtables iptables ebtables iptables edk2-ovmf 
 	else if command_exists apt; then # installer for Debian 
 		 apt install libvirt-deamon virt-manager qemu
 	     else if command_exists dnf; then # installer for Fedora
