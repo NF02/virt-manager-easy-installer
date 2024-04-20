@@ -19,6 +19,10 @@ fi
 if ! command_exists yay; then
     cd /tmp && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 fi
+if ! command_exists qemu-x86_64;then
+    echo "qemu not install"
+fi
+
 
 # Install GNS3 by YAY AUR Helper
 install_gns3(){
@@ -30,9 +34,9 @@ install_gns3(){
 }
 
 cat << 'EOF'
-┏━╸┏┓╻┏━┓╻ ╻   ╻┏┓╻┏━┓╺┳╸┏━┓╻  ╻  ┏━╸┏━┓
-┃╺┓┃┗┫┗━┓┗━┫   ┃┃┗┫┗━┓ ┃ ┣━┫┃  ┃  ┣╸ ┣┳┛
-┗━┛╹ ╹┗━┛  ╹   ╹╹ ╹┗━┛ ╹ ╹ ╹┗━╸┗━╸┗━╸╹┗╸
+┏━╸┏┓╻┏━┓┏━┓   ╻┏┓╻┏━┓╺┳╸┏━┓╻  ╻  ┏━╸┏━┓
+┃╺┓┃┗┫┗━┓╺━┫   ┃┃┗┫┗━┓ ┃ ┣━┫┃  ┃  ┣╸ ┣┳┛
+┗━┛╹ ╹┗━┛┗━┛   ╹╹ ╹┗━┛ ╹ ╹ ╹┗━╸┗━╸┗━╸╹┗╸
 --------------------------------------------------------------
  * install GNS3 server and GUI;
  * dynamips support;
