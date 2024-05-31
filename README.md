@@ -37,3 +37,6 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-i
 privileges via the `sudo` command, in case this utility is not installed
 the script will not work.
 - Another requirement is Systemd Init.
+
+## Void Linux ##
+There is a version of the script designed for Void Linux, as it uses Runit instead of Systemd, so a rewrite was mandatory.
