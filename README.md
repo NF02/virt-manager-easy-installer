@@ -40,3 +40,13 @@ the script will not work.
 
 ## Void Linux ##
 There is a version of the script designed for Void Linux, as it uses Runit instead of Systemd, so a rewrite was mandatory.
+### Autoinstall ###
+#### curl ####
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager-void-linux.sh)"
+```
+
+### wget ###
+```bash
+ sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager-void-linux.sh -O -)"
+```
