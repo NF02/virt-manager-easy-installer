@@ -46,7 +46,7 @@ There is a version of the script designed for Void Linux, as it uses Runit inste
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager-void-linux.sh)"
 ```
 
-### wget ###
+#### wget ####
 ```bash
  sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager-void-linux.sh -O -)"
 ```
