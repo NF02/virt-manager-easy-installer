@@ -43,10 +43,10 @@ There is a version of the script designed for Void Linux, as it uses Runit inste
 ### Autoinstall ###
 #### curl ####
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/virtmenager-void-linux.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/virt-manager-void-linux.sh)"
 ```
 
 #### wget ####
 ```bash
- sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/virtmenager-void-linux.sh -O -)"
+ sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/virt-manager-void-linux.sh -O -)"
 ```
