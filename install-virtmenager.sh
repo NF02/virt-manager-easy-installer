@@ -8,7 +8,7 @@ fi
 install_virt() {
     	if command_exists pacman; then
 		sudo pacman -Sy qemu-full virt-manager virt-viewer dnsmasq vde2  \
-	     		openbsd-netcat ebtables iptables ebtables iptables2 edk2-ovmf 
+	     		openbsd-netcat ebtables iptables ebtables edk2-ovmf 
 	else if command_exists apt; then # installer for Debian 
 		 apt install libvirt-deamon virt-manager qemu
 	     else if command_exists dnf; then # installer for Fedora
