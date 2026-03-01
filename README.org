@@ -1,0 +1,49 @@
+#+author: Nicola Ferru
+#+email: ask.nfvblog@outlook.it
+#+title: vir-manager easy installer
+
+This repo explains how to install the Virt-manager virtualization environment, in the most functional way possible, without excluding a practical automated installation script, which will set up the service on *Arch Linux*, complete with automatic assignment of user privileges.
+
+* Setup                                                               :setup:
+The first step is to clone the repo:
+#+begin_src shell
+  git clone https://github.com/NF02/virt-manager-dotfiles && cd virt-manager-dotfiles
+#+end_src
+The second step is to grant the application the execution permissions, to do that it is necessary to execute the command
+#+begin_src shell
+  chmod +x install-virtmenager.sh
+#+end_src
+/Obviously the execution permissions must be assigned manually, otherwise it does not allow you to execute the parts it requires./
+#+begin_src shell
+  ./install-virtmenager.sh
+#+end_src
+
+*** EFI Firmware (edk2-ovmf)                                 :EFI:Firmware:
+The UEFI firmwaore is a separate package compared to the virtualization environment, and for this reason I have included it in the script so that I can fully exploit it. Of course the =HOST= machine can also be legacy because it doesn't affect the =guest= system.
+** Autoinstall                                                 :auto_install:
+*** curl                                                    :curl:run_script:
+#+begin_src shell
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager.sh)"
+#+end_src
+*** wget                                                    :wget:run_script:
+#+begin_src shell
+  sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/install-virtmenager.sh -O -)"
+#+end_src
+
+** Warning!!
+- This script is meant to be run with an admin user, so that can use admin privileges via the =sudo= command, in case this utility is not installed the script will not work.
+- Another requirement is Systemd Init.
+  
+* Void Linux                                       :install:void_linux:runit:
+There is a version of the script designed for Void Linux, as it uses Runit instead of Systemd, so a rewrite was mandatory.
+
+** curl                                              :curl:run_script:runit:
+#+begin_src shell
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/virt-manager-void-linux.sh)"
+#+end_src
+
+** wget                                              :wget:run_script:runit:
+#+begin_src shell
+  sh -c "$(wget https://raw.githubusercontent.com/NF02/virt-manager-easy-installer/main/virt-manager-void-linux.sh -O -)"
+#+end_src
+
